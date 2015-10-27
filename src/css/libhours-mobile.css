@@ -1,0 +1,91 @@
+/**
+ * Mobile hours styles
+ * https://github.com/upenn-libraries/LibCal-Tools
+ */
+.phoneonlyblock {display:none;}
+.phone .phoneonlyblock {display:block;}
+#holdmobilecalendar {
+    display: none;
+}
+.phone #holdmobilecalendar {
+    display: block !important;
+}
+.phone #holdcalendar {
+    display: none;
+}
+.phone #sitename {
+    line-height: 1;
+    margin: -1em 0px 0px 6em;
+}
+.phone #branding, #jumplistgo {
+    display: none;
+}
+.phone #pageheader {
+    background-image:none;
+    height: 28px;
+}
+.phone #headerbg {
+    background-image: none;
+    height: 28px;
+}
+.phone #contentheader {
+    padding: 10px 15px;
+    background-color: #031b51;
+}
+.phone h1#library {
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    margin: 0;
+    padding: 0
+}
+.phone h1#library a, .phone h1#library a:visited {
+    color: #fff;
+}
+.phone .jumplist select {
+    width: 100%;
+}
+.tablet .jumplist {
+    float: none;
+    top: 0;
+    margin: 15px;
+}
+.tablet .nameandacctlink, .phone #homepagelink {
+    display: none;
+}
+.mobiledate, .mobilehours {
+    display: inline-block;
+    padding: 10px 0;
+}
+.mobiledate {
+    width: 55%;
+    text-align: right;
+    margin-right: 5px;
+}
+.mobiletitle {
+    display: inline-block;
+    margin: 20px;
+}
+.mobileconsole {
+    text-align: center;
+    font-size: 24px;
+}
+.mobilenav {
+    font-size: 26px;
+    font-weight: bold;
+}
+.mobileodd {
+    background-color: #FFF;
+}
+.mobileeven {
+    background-color: #EEE;
+}
+.today {
+    -moz-box-shadow:    inset 0 0 5px #223D7A;
+    -webkit-box-shadow: inset 0 0 5px #223D7A;
+    box-shadow:         inset 0 0 5px #223D7A;
+    background-color: #D4DDFF;
+}
+.visible {
+    display: block !important;
+}

@@ -1,0 +1,49 @@
+/**
+ * Hours chart styles
+ * https://github.com/upenn-libraries/LibCal-Tools
+ */
+#holdcalendar {
+    display: block !important;
+}
+.specialpanel, .libhours-loading {
+    margin:0  100px;
+    font-size: 13px;
+}
+.homeul {
+    list-style-type: none;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 0;
+    width: 49%;
+}
+.homeul li {
+    padding: 0.5em 0.333em 0.42em;
+}
+.homeul li.odd {
+    background-color: #dfdfdf;
+}
+.left {
+    margin-right: 2%;
+}
+.hours {
+    padding-left: 10px;
+}
+/* Mobile */
+@media (max-width: 1024px) {
+    .specialpanel {
+        margin: 0 50px;
+    }
+}
+@media (max-width : 700px) {
+    .specialpanel {
+        margin: 10px 10px;
+    }
+    .homeul {
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
+    .left {
+        padding: 0;
+    }
+}
