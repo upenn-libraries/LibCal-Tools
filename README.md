@@ -9,7 +9,7 @@ All you need to do to use these scripts out-of-the-box is add your institution-s
 
 After adding your info to the scripts, we recommend minifying the scripts before using them. If you don't already have a preferred method for doing this, you can paste the script into a minification tool such as [JSCompress](http://jscompress.com/). Easy peasy!
 
-## libhours.js: Today's Hours++ ##
+## [libhours.js](src/js/libhours.js): Today's Hours++ ##
 This script is a sophisticated version of the standard "Today's Hours" widget. Rather than managing individual scripts in every single place you want to display a library's hours, you can instead use this master script to manage all hours for all libraries. This script will insert the correct hours into any libhours-div you place on the page.
 We built this script when we migrated to Libcal from an old, homegrown Perl-based calendar system, where we could insert an ["include" tag](https://en.wikipedia.org/wiki/Server_Side_Includes) to make hours appear. This JS solution emulates that behavior.
 One example of this script in action is at the [Penn Libraries Locations Page](http://www.library.upenn.edu/locations/); all hours were fetched and inserted by this single script.
@@ -29,10 +29,10 @@ If you want to display the hours chart, insert this div: `<div class="libhours-c
 
 That's it! From there, the script will take care of the rest. If you use the chart, you might want to add some CSS to style it:
 
-#### libhours-chart.css ####
+#### [libhours-chart.css](src/css/libhours-chart.css) ####
 This is our default stylesheet for the libhours chart. Use it as-is, modify it, or write your own styles.
 
-## libhours-mobile.js: Mobile Hours for a Mobile World ##
+## [libhours-mobile.js](src/js/libhours-mobile.js): Mobile Hours for a Mobile World ##
 This is a custom mobile view of a single library's hours, displayed weekly instead of monthly. We built this because the full calendar widget looks great on desktop, but not-so-great on mobile. Assuming you have one calendar per page, you can use this same script for all your calendars.
 To see this script in action, check out [Van Pelt Library's hours](http://www.library.upenn.edu/hours/vp.html) on a mobile device (or resize your browser window).
 
@@ -47,8 +47,8 @@ If you only have a single calendar or simply don't want this functionality, you 
 
 Finally, add the script to your page and let it do its magic!
 
-#### libhours-mobile.css ####
+#### [libhours-mobile.css](src/css/libhours-mobile.css) ####
 This contains the default styling for the libhours-mobile widget. Use it out-of-the-box, tweak it, or replace it entirely with your own custom CSS.
 
-## libhours-utilities.js: Responsive Styling Made Easy ##
+## [responsive-config.js](src/js/responsive-config.js): Responsive Styling Made Easy ##
 *OPTIONAL SCRIPT.* If you don't already have a method of implementing responsive design, this script is for you! It contains a function that applies classes to the body for responsive styling. By default, it adds classes for "phone", "tablet", and "desktop" sizes.
