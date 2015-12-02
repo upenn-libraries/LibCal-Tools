@@ -61,6 +61,7 @@
     width: 55%;
     text-align: right;
     margin-right: 5px;
+    vertical-align: top;
 }
 .mobiletitle {
     display: inline-block;

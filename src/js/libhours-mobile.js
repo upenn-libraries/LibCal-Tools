@@ -59,12 +59,10 @@ jQuery(function($){
 					// Give each week a heading of "Month, YYYY" based on first day of the week.
 					$weekContainer.attr("data-heading", formatDate(week[day].date, true));
 				}
-				var formattedHours = "";
-				// If open, show the hours. Otherwise, show the day's status (for example, 'closed').
+				var formattedHours = week[day].rendered;
+				// If open, make sure multiple sets of hours are separated by a line break (otherwise, it wraps to the next line).
 				if (week[day].times.status === "open") {
-					formattedHours += formatHours(week[day].times.hours);
-				} else {
-					formattedHours += week[day].times.status;
+					formattedHours = formattedHours.replace(/\. /g, ",</br>"); // The API splits sets of hours with a period.
 				}
 				$weekContainer.append('<div class="mobilerow '+isToday+'"><div class="mobiledate">'+formattedDate+'</div><div class="mobilehours">'+formattedHours+'</div></div>');
 			}
@@ -126,18 +124,6 @@ jQuery(function($){
 		if (isHeader) {
 			return fullMonths[jsDate.getUTCMonth()] + " " + jsDate.getUTCFullYear();
 		} else return months[jsDate.getUTCMonth()] + " " + jsDate.getUTCDate();
-	}
-
-	/** Formats hours from LibCal JSON. **/
-	function formatHours(hours) {
-		var hoursString = "";
-		for (var i=0; i<hours.length; i++) {
-			if (i>0) {
-				hoursString += ", ";
-			}
-			hoursString += hours[i].from + " - " + hours[i].to;
-		}
-		return hoursString;
 	}
 
 	/** Checks if a given date is today. If it is, return a special class for styling. Otherwise, return empty string. **/
