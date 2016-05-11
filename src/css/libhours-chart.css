@@ -25,8 +25,8 @@
 .left {
     margin-right: 2%;
 }
-.hours {
-    padding-left: 10px;
+.libhours-vertical-bar {
+    padding: 0 3px;
 }
 /* Mobile */
 @media (max-width: 1024px) {

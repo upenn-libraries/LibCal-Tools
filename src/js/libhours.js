@@ -155,7 +155,7 @@ jQuery(document).ready(function($){
 				.text(displayName)
 				.attr('href', library.jsonData.url)
 				.appendTo(li);
-			li.append("&#160;");
+			li.append('<span class="libhours-vertical-bar">&#160;|&#160;</span>');
 			var libHours = $('<a></a>')
 				.text("hours")
 				.addClass("hours")
